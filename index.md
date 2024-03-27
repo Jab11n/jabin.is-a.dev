@@ -1,6 +1,8 @@
 # jabin.is-a.dev
 this is my cool website!  
-some more about me
+
+## my links
+[bitview](http://bitview.net/user/jabin) | [discord](https://discord.com/users/964614935298588692) | [youtube](https://youtube.com/@jabinstech) | [other site](https://jabinstech.net/)
 
 ## projects
 ### project name
