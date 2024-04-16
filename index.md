@@ -5,11 +5,11 @@ this is my cool website!
 [bitview](http://bitview.net/user/jabin) | [discord](https://discord.com/users/964614935298588692) | [youtube](https://youtube.com/@jabinstech) | [other site](https://jabinstech.net/)
 
 ## projects
+### CapyPic: The Awesomest Discord Bot  
+Have you ever wanted a Discord bot that displays pictures of capybaras? Well I've got you covered. I developed CapyPic, which is the best ever Discord bot for getting a quick picture of a capybara!  
+[Project Website](https://capy.jabinstech.net/) | [Add Bot](http://invite.capy.jabinstech.net/)
 ### project name
-project description  
-[more!](#) | [project site](#)
-### project name
-project description  
+project description (coming soon)  
 [more!](#) | [project site](#)
 
 ## cool stuff
