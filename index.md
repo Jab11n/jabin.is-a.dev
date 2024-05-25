@@ -18,10 +18,10 @@ these are cool things i use on the internet (not made by me though)
 * cloudflare
 * github
 * discord4j
-* pcpartpicker  
+* discord.py
+* scratchattach  
 
 ## my stuff  
-things i've made!  
 [<img alt="Discord" src="https://img.shields.io/discord/972126416646860850?logo=discord&logoColor=white&label=capybara%20fan%20club">](https://discord.gg/GKGRS7zz2C)  
 
 ## me right now  
