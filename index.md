@@ -8,9 +8,9 @@ this is my cool website!
 ### CapyPic: The Awesomest Discord Bot  
 Have you ever wanted a Discord bot that displays pictures of capybaras? Well I've got you covered. I developed CapyPic, which is the best ever Discord bot for getting a quick picture of a capybara!  
 [Project Website](https://capy.jabinstech.net/) | [Add Bot](http://invite.capy.jabinstech.net/)
-### project name
-project description (coming soon)  
-[more!](#) | [project site](#)
+### ScratchInDiscord  
+A bot bridging the gap between Scratch and Discord! View info, stats, projects, etc. all from Discord!  
+[Project Website](https://sid.jabinstech.net/) | [Add Bot](http://invite.scratchindiscord.jabinstech.net/)
 
 ## cool stuff
 these are cool things i use on the internet (not made by me though)  
