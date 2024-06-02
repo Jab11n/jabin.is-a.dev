@@ -24,11 +24,6 @@ these are cool things i use on the internet (not made by me though)
 ## my stuff  
 [<img alt="Discord" src="https://img.shields.io/discord/972126416646860850?logo=discord&logoColor=white&label=capybara%20fan%20club">](https://discord.gg/GKGRS7zz2C)  
 
-## me right now  
-[![Discord Presence](https://lanyard.cnrad.dev/api/964614935298588692)](https://discord.com/users/964614935298588692)  
-(this is my discord presence, refresh the page to see if anything's changed)  
-it says what song i'm playing or what game i'm playing  
-
 ## why i use a github pages theme  
 trust me, i'm going to make my own website soon! i just needed to make a page to use until i have the time and knowledge to do that. also this github pages theme is exactly what i need lol.  
 soon™
