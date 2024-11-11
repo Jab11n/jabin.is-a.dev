@@ -9,17 +9,19 @@ this is my cool website!
 Have you ever wanted a Discord bot that displays pictures of capybaras? Well I've got you covered. I developed CapyPic, which is the best ever Discord bot for getting a quick picture of a capybara!  
 [Project Website](https://jabin.is-a.dev/capypic/) | [Add Bot](https://rdr.lol/go/invitecapypic/)
 ### ScratchInDiscord  
-A bot bridging the gap between Scratch and Discord! View info, stats, projects, etc. all from Discord!  
+A bot bridging the gap between [Scratch](https://scratch.mit.edu/) and Discord! View info, stats, projects, etc. all from Discord!  
 [Project Website](https://sid.jabinstech.net/) | [Add Bot](http://invite.scratchindiscord.jabinstech.net/)
 
 ## cool stuff
 these are cool things i use on the internet (not made by me though)  
-* elysian nodes (elysiannodes.uk)
-* cloudflare (cloudflare.com - yay pages and yay security)
+* cloudflare (yay pages and yay security)
 * github (good i guess)
 * discord.py
 * vscode + windows 11 ❤️
 * windows terminal 🔥
+* random jailbroken chromebook sometimes
+* namecheap where i buy a whole bunch of random domains i'll probably never use (i like buying them but it's hard to find something to do with them, **if you have any ideas for `1ll.lol` hmu**)
+* dr pepper for existing and being delicious
 
 ## my stuff  
 [<img alt="Discord" src="https://img.shields.io/discord/972126416646860850?logo=discord&logoColor=white&label=capybara%20fan%20club">](https://discord.gg/GKGRS7zz2C)  
