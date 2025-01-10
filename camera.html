@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Source Selector</title>
+    <title>Online Camera Viewer</title>
     <style>
         body {
             display: flex;
@@ -19,12 +19,34 @@
         video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Fills the screen */
+            object-fit: cover;
         }
         #controls {
             position: absolute;
             top: 20px;
             left: 20px;
+        }
+        button {
+            background-color: #100e24;
+            color: #fff;
+            border: 4px solid midnightblue;
+            transition: ease 0.4s all;
+        }
+        button:hover {
+            background-color: #5248bc;
+            color: linen;
+            cursor: pointer;
+        }
+        #deviceSelect {
+            background-color: #100e24;
+            color: #fff;
+            border: 4px solid midnightblue;
+            transition: ease 0.4s all;
+        }
+        #deviceSelect:hover {
+            background-color: #5248bc;
+            color: linen;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -35,67 +57,77 @@
         <button id="fullscreenButton">Toggle Fullscreen</button>
         <button id="mirrorButton">Toggle Mirror</button>
     </div>
-
     <script>
-        const video = document.getElementById('video');
-        const deviceSelect = document.getElementById('deviceSelect');
-        const fullscreenButton = document.getElementById('fullscreenButton');
-        const mirrorButton = document.getElementById('mirrorButton');
-        let isMirrored = false;
+    const video = document.getElementById('video');
+    const deviceSelect = document.getElementById('deviceSelect');
+    const fullscreenButton = document.getElementById('fullscreenButton');
+    const mirrorButton = document.getElementById('mirrorButton');
+    let isMirrored = false;
 
-        async function getVideoDevices() {
-            const devices = await navigator.mediaDevices.enumerateDevices();
-            const videoDevices = devices.filter(device => device.kind === 'videoinput');
+    async function getVideoDevices() {
+        const devices = await navigator.mediaDevices.enumerateDevices();
+        const videoDevices = devices.filter(device => device.kind === 'videoinput');
 
-            videoDevices.forEach(device => {
-                const option = document.createElement('option');
-                option.value = device.deviceId;
-                option.text = device.label || `Camera ${deviceDevices.length + 1}`;
-                deviceSelect.appendChild(option);
-            });
+        videoDevices.forEach(device => {
+            const option = document.createElement('option');
+            option.value = device.deviceId;
+            option.text = device.label || `Camera ${videoDevices.length + 1}`;
+            deviceSelect.appendChild(option);
+        });
 
-            // Start with the first video device
-            if (videoDevices.length > 0) {
-                startStream(videoDevices[0].deviceId);
-            }
+        // Start with the first video device
+        if (videoDevices.length > 0) {
+            startStream(videoDevices[0].deviceId);
         }
+    }
 
-        async function startStream(deviceId) {
-            const stream = await navigator.mediaDevices.getUserMedia({
-                video: { deviceId: { exact: deviceId } }
-            });
+    async function startStream(deviceId) {
+        const stream = await navigator.mediaDevices.getUserMedia({
+            video: { deviceId: { exact: deviceId } }
+        });
+        video.srcObject = stream;
+    }
+
+    deviceSelect.addEventListener('change', (event) => {
+        const deviceId = event.target.value;
+        startStream(deviceId);
+    });
+
+    fullscreenButton.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+        }
+    });
+
+    mirrorButton.addEventListener('click', () => {
+        isMirrored = !isMirrored;
+        video.style.transform = isMirrored ? 'scaleX(-1)' : 'scaleX(1)';
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+        const controls = document.getElementById('controls');
+        if (document.fullscreenElement) {
+            controls.style.display = 'none'; // Hide controls in fullscreen
+        } else {
+            controls.style.display = 'block'; // Show controls when not fullscreen
+        }
+    });
+
+    async function requestCameraPermission() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
             video.srcObject = stream;
+            // Get video devices after permission is granted
+            getVideoDevices();
+        } catch (error) {
+            console.error('Error accessing camera:', error);
         }
+    }
 
-        deviceSelect.addEventListener('change', (event) => {
-            const deviceId = event.target.value;
-            startStream(deviceId);
-        });
+    window.onload = requestCameraPermission;
 
-        fullscreenButton.addEventListener('click', () => {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen();
-            } else {
-                document.exitFullscreen();
-            }
-        });
-
-        mirrorButton.addEventListener('click', () => {
-            isMirrored = !isMirrored;
-            video.style.transform = isMirrored ? 'scaleX(-1)' : 'scaleX(1)';
-        });
-
-        document.addEventListener('fullscreenchange', () => {
-            const controls = document.getElementById('controls');
-            if (document.fullscreenElement) {
-                controls.style.display = 'none'; // Hide controls in fullscreen
-            } else {
-                controls.style.display = 'block'; // Show controls when not fullscreen
-            }
-        });
-
-        // Initialize video devices on load
-        getVideoDevices();
-    </script>
+</script>
 </body>
 </html>
