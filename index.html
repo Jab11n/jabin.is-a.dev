@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            jabin.is-a.dev
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            body {
+                background-color: #100e24;
+                color: #FFFFFF;
+                padding: 0px;
+                margin: 0px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #header {
+                color: #000000;
+                width: 100%;
+                height: 64px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+            #header svg {
+                width: 42px;
+                height: 42px;
+            }
+            #greeting, #projects, #cool-stuff, #thanks {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                max-width: 600px;
+                background-color: #5248bc;
+                border-radius: 20px;
+                padding: 14px;
+                box-sizing: border-box;
+            }
+            h1, h2, h3, p {
+                margin: 0px;
+                padding: 0px;
+            }
+            a {
+                color: #C5BFFF;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 10px;
+                transition: ease 0.4s all;
+            }
+            a:hover {
+                background-color: #100e24;
+            }
+            .socials {
+                font-size: 24px;
+                margin: 0;
+                padding: 0;
+            }
+            .socials a {
+                color: #FFFFFF !important;
+                transition: ease 0.4s all;
+                background: none !important;
+            }
+            .socials a:hover {
+                color: #C5BFFF !important;
+                background: none !important;
+            }
+            .project, .cool-thing {
+                background-color: #3b3489;
+                padding: 16px;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            .project-info {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+            }
+            .project-main {
+                display: flex;
+                gap: 8px;
+                width: 100%;
+            }
+            .project img {
+                border-radius: 10px;
+                width: 160px;
+                height: 90px;
+            }
+            .buttons {
+                display: flex;
+                gap: 8px;
+            }
+            .buttons button {
+                width: 100%;
+                min-height: 46px;
+                align-items: center;
+                background-color: #5248bc;
+                color: #FFFFFF;
+                border: none;
+                border-radius: 10px;
+                padding: 8px;
+                font-weight: bold;
+                cursor: pointer;
+                border: 4px solid #5248bc;
+                transition: ease 0.4s all;
+            }
+            .buttons button:hover {
+                background-color: #100e24;
+            }
+            ul {
+                margin: 0;
+            }
+            #footer {
+                background-color: #5248bc;
+                padding: 8px;
+                text-align: center;
+                width: 100%;
+                height: 64px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.94 328.59" width="226.94" height="328.59">
+                <g transform="translate(-126.33 -12.57)">
+                    <path d="M197.5 142l84-31-1.94 155-81.07 5 4.95-57s-10.58.97-23.51-8.74c-23.8-17.86-29.43 12.74-29.43 12.74l-7 106 184-12 9-276-151 57" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="10"/>
+                </g>
+            </svg>
+                       
+        </div>
+        <div id="greeting">
+            <h1>👋 Hello! I'm Jab11n.</h1>
+            <p>I make cool things for fun! I mostly do stuff on the front end, like websites and clients for stuff, but I also make Discord bots and do some media stuff like video editing.</p>
+            <p>I'm a 15 year old high school student, and I am a Christian living in the United States.</p>
+            <p>I occasionally use Scratch, where you may know me as <a href="https://scratch.mit.edu/users/-gr" target="_blank">@-gr</a>. I also go by -gr on sites like <a href="https://hatch.lol" target="_blank">Hatch</a>, <a href="https://darflen.com/users/-gr" target="_blank">Darflen</a>, and <a href="https://wasteof.money/-gr" target="_blank">wasteof</a>.</p>
+            <p class="socials">
+                <a href="https://github.com/jab11n" target="_blank"><i class="fa-brands fa-square-github"></i></a>&nbsp;
+                <a href="https://youtube.com/@jab11n" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>&nbsp;
+                <a href="https://twitter.com/jab11n" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>&nbsp;
+                <a href="https://bsky.app/profile/jab11n.bsky.social" target="_blank"><i class="fa-brands fa-square-bluesky"></i></a>&nbsp;
+                <a href="https://instagram.com/jab11n.ig" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>&nbsp;
+                <a href="mailto:11@rdr.lol"><i class="fa-solid fa-square-envelope"></i></a>
+            </p>
+        </div>
+        <div id="projects">
+            <div class="section-header">
+                <h1>Projects</h1>
+                <p>Here are some of the projects I've made, am working on, or have contributed to:</p>
+            </div>
+            <div class="project">
+                <div class="project-main">
+                    <div class="project-info">
+                        <h2>Hatch</h2>
+                        <p>Hatch is a Scratch-compatible project sharing website made by me and some other people. It's designed to be like Scratch but more advanced, with TurboWarp extension support and many new social features. Note: this is not a Scratch mod, simply just a social website for sharing projects.</p>
+                        <p class="socials">
+                            <i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i>&nbsp;<i class="fa-brands fa-js-square"></i>&nbsp;<i class="fa-brands fa-rust"></i>
+                        </p>
+                    </div>
+                    <img src="https://rdr.lol/u/GBc7y6.png" alt="hatch banner">
+                </div>
+                <div class="buttons">
+                    <button onclick="window.open('https://hatch.lol', '_blank')">
+                        <i class="fa-solid fa-computer-mouse fa-xl"></i>&ensp;View Project (hatch.lol)
+                    </button>
+                    <button onclick="window.open('https://github.com/hatchdotlol', '_blank')">
+                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on GitHub
+                    </button>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-main">
+                    <div class="project-info">
+                        <h2>Jabin.is-a.dev (this website)</h2>
+                        <p>This is my main personal website. Here I put some information about me, links to my projects, and even occasionally a tool or something i need to put somewhere.</p>
+                        <p class="socials">
+                            <i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button onclick="window.open('https://jabin.is-a.dev', '_blank')">
+                        <i class="fa-solid fa-computer-mouse fa-xl"></i>&ensp;View Project (you're already here)
+                    </button>
+                    <button onclick="window.open('https://github.com/jab11n/jabin.is-a.dev', '_blank')">
+                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on GitHub
+                    </button>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-main">
+                    <div class="project-info">
+                        <h2>CapyPic</h2>
+                        <p>CapyPic is a Discord bot that automatically fetches capybara images for you! It has a super easy slash command to get you a cute picture of a capybara.</p>
+                        <p class="socials">
+                            <i class="fa-brands fa-python"></i>&nbsp;<i class="fa-brands fa-discord"></i>
+                        </p>
+                    </div>
+                    <img src="https://rdr.lol/u/K3OCRl.png" alt="capypic banner">
+                </div>
+                <div class="buttons">
+                    <button onclick="window.open('https://jabin.is-a.dev/capypic', '_blank')">
+                        <i class="fa-solid fa-computer-mouse fa-xl"></i>&ensp;View Project Website
+                    </button>
+                    <button>
+                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on GitHub (soon™)
+                    </button>
+                </div>
+            </div>
+            <p>There is most certainly a project or two I haven't listed here. Check back another time, I guess?</p>
+        </div>
+        <div id="cool-stuff">
+            <div class="section-header">
+                <h1>Cool Stuff</h1>
+                <p>Here are some cool things I have or use.</p>
+            </div>
+            <div class="cool-thing">
+                <h2>Languages</h2>
+                <p><i class="fa-brands fa-html5 fa-xl"></i>&nbsp;<i class="fa-brands fa-css3-alt fa-xl"></i>&nbsp;<i class="fa-brands fa-python fa-xl"></i>&nbsp;<i class="fa-brands fa-java fa-xl"></i>&ensp;<i>i'm learning more languages i promise!!!</i></p>
+            </div>
+            <div class="cool-thing">
+                <h2>Software</h2>
+                <p>There aren't icons for all of these, so I'll just name them:</p>
+                <ul>
+                    <li>Windows 11</li>
+                    <li>Ubuntu 24.04</li>
+                    <li>Raspberry Pi OS</li>
+                    <li>Xubuntu 24.04</li>
+                </ul>
+                <ul>
+                    <li>VSCode</li>
+                    <li>GitHub</li>
+                    <li>Git</li>
+                    <li>Windows Terminal</li>
+                    <li>Gnome Terminal</li>
+                </ul>
+                <ul>
+                    <li>Microsoft Edge</li>
+                    <li>Firefox Developer Edition</li>
+                </ul>
+                <ul>
+                    <li>TurboWarp Desktop</li>
+                    <li>Scratch Addons</li>
+                    <li>ScratchAttach</li>
+                </ul>
+                <ul>
+                    <li>Discord.py</li>
+                </ul>
+                <ul>
+                    <li>Discord</li>
+                    <li>Spotify</li>
+                </ul>
+                <ul>
+                    <li>Xbox</li>
+                    <li>Epic Games</li>
+                    <li>Steam</li>
+                    <li>Roblox</li>
+                    <li>Minecraft</li>
+                    <li>Fortnite</li>
+                    <li>Rocket League</li>
+                    <li>Forza Horizon 4</li>
+                </ul>
+            </div>
+            <div class="cool-thing">
+                <h2>My PC</h2>
+                <p>My PC is custom built.</p>
+                <ul>
+                    <li>Motherboard: ASUS ROG STRIX X670E-E GAMING WIFI</li>
+                    <li>CPU: AMD Ryzen 7 7800x3d</li>
+                    <li>RAM: 32gb g.skill Flare DDR5-6000MHz</li>
+                    <li>GPU: GIGABYTE GeForce RTX 4060</li>
+                    <li>Power Supply: PowerSpec 850w</li>
+                    <li>Cooler: DeepCool LS720 SE 360mm AIO liquid cooler</li>
+                    <li>Case: DeepCool CH560 Airflow ATX mid-tower case</li>
+                    <li>Fans: DeepCool ARGB fans</li>
+                    <li>Storage: 2TB PCIe 4 NVMe SSD</li>
+                </ul>
+            </div>
+            <div class="cool-thing">
+                <h2>My Setup</h2>
+                <p>I have these items that I use for technological purposes!</p>
+                <ul>
+                    <li>Keyboard: Perixx PERIBOARD-335BL Wired Ergonomic Mechanical Compact Keyboard (split keyboard 😱)</li>
+                    <li>Mouse: Logitech M720 Triathlon Multi-Device Wireless Mouse</li>
+                    <li>Main monitor: AOPEN Fire Legend 1080p 27" 240hz gaming monitor</li>
+                    <li>Secondary monitor: HannSpree monitor thing idk i got at a garage sale for $2, it is less than 1080p, 60hz</li>
+                    <li>Tertiary monitor: Gateway something @ 1600x900px that I got for $10 at a thrift store. 75hz.</li>
+                    <li>Jailbroken Chromebook: I have this Lenovo Phaser360 Chromebook I used <a href="https://mrchromebox.tech" target="_blank">mrchromebox</a> firmware on. I currently have it running Ubuntu 24.04, but previously it ran Xubuntu 24.04, and prior to that it ran Windows 10. Helpfully, it is 64-bit so I don't have to deal with lacking ARM support.</li>
+                    <li>Raspberry Pi 4 4gb which currently runs some Discord bots</li>
+                    <li>Microphone: FiFine Ampligame A6T</li>
+                    <li>Headset: FiFine Ampligame H9 PC Gaming Headset, USB Headset with 7.1 Surround Sound, Detachable Microphone, Control Box, 3.5mm Headphones Jack, Over-Ear Wired Headset</li>
+                    <li>Phone: Google Pixel 7a with Nova Launcher</li>
+                </ul>
+            </div>
+        </div>
+        <div id="thanks">
+            <h1>Thanks for visiting!</h1>
+        </div>
+        <div id="footer">
+            <p>© 2025 Jab11n</p>
+        </div>
+    </body>
+</html>
