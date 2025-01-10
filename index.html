@@ -6,9 +6,18 @@
         </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
+            :root {
+                --background: #100e24;
+                --section: #5248bc;
+                --nestedSection: #3b3489;
+                --link: #C5BFFF;
+                --borderRadius: 20px;
+                --borderRadius2: 10px;
+                --textColor: #FFFFFF;
+            }
             body {
-                background-color: #100e24;
-                color: #FFFFFF;
+                background-color: var(--background);
+                color: var(--textColor);
                 padding: 0px;
                 margin: 0px;
                 display: flex;
@@ -17,7 +26,6 @@
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
             #header {
-                color: #000000;
                 width: 100%;
                 height: 64px;
                 justify-content: center;
@@ -36,8 +44,8 @@
                 margin-right: auto;
                 width: 100%;
                 max-width: 600px;
-                background-color: #5248bc;
-                border-radius: 20px;
+                background-color: var(--section);
+                border-radius: var(--borderRadius);
                 padding: 14px;
                 box-sizing: border-box;
             }
@@ -46,14 +54,14 @@
                 padding: 0px;
             }
             a {
-                color: #C5BFFF;
+                color: var(--link);
                 text-decoration: none;
                 font-weight: bold;
-                border-radius: 10px;
+                border-radius: var(--borderRadius2);
                 transition: ease 0.4s all;
             }
             a:hover {
-                background-color: #100e24;
+                background-color: var(--background);
             }
             .socials {
                 font-size: 24px;
@@ -61,18 +69,18 @@
                 padding: 0;
             }
             .socials a {
-                color: #FFFFFF !important;
+                color: var(--textColor) !important;
                 transition: ease 0.4s all;
                 background: none !important;
             }
             .socials a:hover {
-                color: #C5BFFF !important;
+                color: var(--link) !important;
                 background: none !important;
             }
             .project, .cool-thing {
-                background-color: #3b3489;
+                background-color: var(--nestedSection);
                 padding: 16px;
-                border-radius: 20px;
+                border-radius: var(--borderRadius);
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
@@ -89,7 +97,7 @@
                 width: 100%;
             }
             .project img {
-                border-radius: 10px;
+                border-radius: var(--borderRadius2);
                 width: 160px;
                 height: 90px;
             }
@@ -101,24 +109,24 @@
                 width: 100%;
                 min-height: 46px;
                 align-items: center;
-                background-color: #5248bc;
-                color: #FFFFFF;
+                background-color: var(--section);
+                color: var(--textColor);
                 border: none;
-                border-radius: 10px;
+                border-radius: var(--borderRadius2);
                 padding: 8px;
                 font-weight: bold;
                 cursor: pointer;
-                border: 4px solid #5248bc;
+                border: 4px solid var(--section);
                 transition: ease 0.4s all;
             }
             .buttons button:hover {
-                background-color: #100e24;
+                background-color: var(--background);
             }
             ul {
                 margin: 0;
             }
             #footer {
-                background-color: #5248bc;
+                background-color: var(--section);
                 padding: 8px;
                 text-align: center;
                 width: 100%;
