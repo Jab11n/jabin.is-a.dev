@@ -31,6 +31,11 @@
                 justify-content: center;
                 align-items: center;
                 display: flex;
+                position: sticky;
+                top: 0;
+                background-color: rgba(16, 14, 36, 0.2);
+                backdrop-filter: blur(10px);
+                z-index: 1000;
             }
             #header svg {
                 width: 42px;
@@ -134,13 +139,13 @@
                 box-sizing: border-box;
             }
             .code {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #c4c4c4;
-            color: #000;
-            font-weight: bold;
-            padding-left: 3px;
-            padding-right: 3px;
-            border-radius: 4px;;
+                font-family: 'Courier New', Courier, monospace;
+                background-color: #c4c4c4;
+                color: #000;
+                font-weight: bold;
+                padding-left: 3px;
+                padding-right: 3px;
+                border-radius: 4px;
             }
         </style>
     </head>
@@ -150,8 +155,7 @@
                 <g transform="translate(-126.33 -12.57)">
                     <path d="M197.5 142l84-31-1.94 155-81.07 5 4.95-57s-10.58.97-23.51-8.74c-23.8-17.86-29.43 12.74-29.43 12.74l-7 106 184-12 9-276-151 57" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="10"/>
                 </g>
-            </svg>
-                       
+            </svg>  
         </div>
         <div id="greeting">
             <h1>👋 Hello! I'm Jab11n.</h1>
@@ -175,11 +179,8 @@
             <div class="project">
                 <div class="project-main">
                     <div class="project-info">
-                        <h2>Hatch</h2>
+                        <h2>Hatch&ensp;<i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i>&nbsp;<i class="fa-brands fa-js-square"></i>&nbsp;<i class="fa-brands fa-rust"></i></h2>
                         <p>Hatch is a Scratch-compatible project sharing website made by me and some other people. It's designed to be like Scratch but more advanced, with TurboWarp extension support and many new social features. Note: this is not a Scratch mod, simply just a social website for sharing projects.</p>
-                        <p class="socials">
-                            <i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i>&nbsp;<i class="fa-brands fa-js-square"></i>&nbsp;<i class="fa-brands fa-rust"></i>
-                        </p>
                     </div>
                     <img src="https://rdr.lol/u/GBc7y6.png" alt="hatch banner">
                 </div>
@@ -195,12 +196,10 @@
             <div class="project">
                 <div class="project-main">
                     <div class="project-info">
-                        <h2>Jabin.is-a.dev (this website)</h2>
+                        <h2>Jabin.is-a.dev (this website)&ensp;<i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i></h2>
                         <p>This is my main personal website. Here I put some information about me, links to my projects, and even occasionally a tool or something i need to put somewhere.</p>
-                        <p class="socials">
-                            <i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i>
-                        </p>
                     </div>
+                    <img src="https://rdr.lol/u/2zoTQP.png" alt="jabin.is-a.dev banner">
                 </div>
                 <div class="buttons">
                     <button onclick="window.open('https://jabin.is-a.dev', '_blank')">
@@ -214,13 +213,10 @@
             <div class="project">
                 <div class="project-main">
                     <div class="project-info">
-                        <h2>CapyPic</h2>
+                        <h2>CapyPic&ensp;<i class="fa-brands fa-python"></i>&nbsp;<i class="fa-brands fa-discord"></i></h2>
                         <p>CapyPic is a Discord bot that automatically fetches capybara images for you! It has a super easy slash command to get you a cute picture of a capybara.</p>
-                        <p class="socials">
-                            <i class="fa-brands fa-python"></i>&nbsp;<i class="fa-brands fa-discord"></i>
-                        </p>
                     </div>
-                    <img src="https://rdr.lol/u/K3OCRl.png" alt="capypic banner">
+                    <img src="https://rdr.lol/u/oa5K5Y.png" alt="capypic banner">
                 </div>
                 <div class="buttons">
                     <button onclick="window.open('https://jabin.is-a.dev/capypic', '_blank')">
@@ -228,6 +224,23 @@
                     </button>
                     <button>
                         <i class="fa-brands fa-github fa-xl"></i>&ensp;View on GitHub (soon™)
+                    </button>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-main">
+                    <div class="project-info">
+                        <h2>WatchBot&ensp;<i class="fa-brands fa-python"></i>&nbsp;<i class="fa-brands fa-discord"></i></h2>
+                        <p>WatchBot is a custom self-hostable Discord bot I made that will send a request to your website in an increment of time that you choose and if your website goes down it will let you know in a Discord channel, then it will let you know when it goes up again.<br>This is currently used for monitoring Hatch's API.</p>
+                    </div>
+                    <img src="https://rdr.lol/u/p50cQV.png" alt="watchbot banner">
+                </div>
+                <div class="buttons">
+                    <button onclick="window.open('https://jabin.is-a.dev/watchbot', '_blank')">
+                        <i class="fa-solid fa-computer-mouse fa-xl"></i>&ensp;View Project Website
+                    </button>
+                    <button onclick="window.open('https://github.com/jab11n/watchbot', '_blank')">
+                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on GitHub
                     </button>
                 </div>
             </div>
