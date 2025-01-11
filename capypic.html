@@ -4,225 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CapyPic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Base styles */
+        :root {
+            --background: #100e24;
+            --section: #5248bc;
+            --nestedSection: #3b3489;
+            --link: #C5BFFF;
+            --borderRadius: 20px;
+            --borderRadius2: 10px;
+            --textColor: #FFFFFF;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #36393F;
-            color: #FFFFFF;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
+            background-color: var(--background);
+            color: var(--textColor);
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #header {
+            width: 100%;
+            height: 64px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        #header svg {
+            width: 42px;
+            height: 42px;
+        }
+        #capypic, #features, #updates, #terms {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 600px;
+            background-color: var(--section);
+            border-radius: var(--borderRadius);
+            padding: 14px;
+            box-sizing: border-box;
         }
         h1, h2, h3, p {
-            margin: 0;
-            padding: 0.5em;
+            margin: 0px;
+            padding: 0px;
         }
         a {
+            color: var(--link);
             text-decoration: none;
-            color: #7289DA;
+            font-weight: bold;
+            border-radius: var(--borderRadius2);
+            transition: ease 0.4s all;
         }
         a:hover {
-            color: #99AAB5;
-        }
-
-        /* Triangle Background Accents */
-        .background-triangle {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: #7289DA;
-            opacity: 0.15;
-            clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-            transform: rotate(20deg);
-        }
-        .triangle1 {
-            top: 10%;
-            left: 5%;
-        }
-        .triangle2 {
-            top: 30%;
-            right: 10%;
-            transform: rotate(-30deg);
-        }
-        .triangle3 {
-            bottom: 20%;
-            left: 10%;
-            transform: rotate(45deg);
-        }
-
-        /* Layout styling */
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            position: relative;
-        }
-        .header {
-            text-align: center;
-            padding: 20px;
-            background-color: #23272A;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            font-size: 2.5em;
-            color: #7289DA;
+            background-color: var(--background);
         }
         .buttons {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            flex-wrap: wrap;
+            gap: 8px;
         }
-        .buttons a {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #7289DA;
-            color: white;
-            border-radius: 8px;
+        button {
+            width: 100%;
+            min-height: 46px;
+            align-items: center;
+            background-color: var(--nestedSection);
+            color: var(--textColor);
+            border: none;
+            border-radius: var(--borderRadius2);
+            padding: 8px;
             font-weight: bold;
-            text-align: center;
-            min-width: 130px;
+            cursor: pointer;
+            border: 4px solid var(--nestedSection);
+            transition: ease 0.4s all;
         }
-        .buttons a:hover {
-            background-color: #99AAB5;
+        button:hover {
+            background-color: var(--background);
         }
-
-        /* Featured Image */
-        .featured-image-container {
-            text-align: center;
-            margin: 30px 0;
+        .cool-thing {
+            background-color: var(--nestedSection);
+            padding: 16px;
+            border-radius: var(--borderRadius);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
-        .featured-image-container img {
+        .cool-thing img {
             max-width: 100%;
             height: auto;
-            border-radius: 12px;
-            border: 5px solid #7289DA;
+            border-radius: var(--borderRadius2);
+            border: 5px solid var(--section);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
-
-        /* Features and Updates section */
-        .section {
-            padding: 30px 0;
-        }
-        .section h2 {
-            color: #7289DA;
+        #footer {
+            background-color: var(--section);
+            padding: 8px;
             text-align: center;
+            width: 100%;
+            height: 64px;
+            box-sizing: border-box;
         }
-        .features, .updates {
-            background-color: #2C2F33;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        ul {
+            margin: 0;
         }
-        .feature, .update {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #40444B;
-            border-radius: 6px;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #23272A;
-            padding: 20px;
-            text-align: center;
-        }
-        .footer p {
-            margin: 10px 0;
-            color: #99AAB5;
-        }
-        .social-links a {
-            color: #7289DA;
-            margin: 0 10px;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            .buttons a {
-                padding: 10px 20px;
-                font-size: 0.9em;
-            }
-            .container {
-                padding: 15px;
-            }
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #c4c4c4;
+            color: #000;
+            font-weight: bold;
+            padding-left: 3px;
+            padding-right: 3px;
+            border-radius: 4px;;
         }
     </style>
 </head>
 <body>
-    <div class="background-triangle triangle1"></div>
-    <div class="background-triangle triangle2"></div>
-    <div class="background-triangle triangle3"></div>
-
-    <div class="header">
-        <h1>CapyPic</h1>
-        <p>Fetch capybara pictures in your server!</p>
-        <div class="buttons">
-            <a href="https://rdr.lol/go/invitecapypic" target="_blank">Add Bot</a>
-            <a href="https://discord.gg/3TbqBBEZCC" target="_blank">Join Support Server</a>
-        </div>
+    <div id="header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.94 328.59" width="226.94" height="328.59">
+            <g transform="translate(-126.33 -12.57)">
+                <path d="M197.5 142l84-31-1.94 155-81.07 5 4.95-57s-10.58.97-23.51-8.74c-23.8-17.86-29.43 12.74-29.43 12.74l-7 106 184-12 9-276-151 57" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="10"/>
+            </g>
+        </svg>
     </div>
-
-    <!-- Featured Image Section -->
-    <div class="container">
-        <div class="featured-image-container">
+    <div id="capypic">
+        <h1>CapyPic</h1>
+        <p>Fetch capybara pictures in your Discord server!</p>
+        <div class="buttons">
+            <button onclick="window.open('https://rdr.lol/go/invitecapypic', '_blank')">
+                <i class="fa-solid fa-plus fa-xl"></i>&ensp;Add Bot
+            </button>
+            <button onclick="window.open('https://discord.gg/3TbqBBEZCC', '_blank')">
+                <i class="fa-brands fa-discord fa-xl"></i>&ensp;Join Support Server
+            </button>
+        </div>
+        <div class="cool-thing">
             <img src="https://rdr.lol/u/gB1VM9.png" alt="Featured Bot Image">
         </div>
     </div>
-
-    <!-- Features Section -->
-    <div class="container">
-        <div class="section">
+    <div id="features">
+        <div class="section-header">
             <h2>Features</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>Get Capybara Pictures</h3>
-                    <p>With CapyPic's easy /capybara command, you can get a new picture of a capybara with ease. We use the <a href="https://capy.lol/" target="_blank">capy.lol</a> API for capybara pictures.</p>
-                </div>
-                <div class="feature">
-                    <h3>Capybara Facts</h3>
-                    <p>CapyPic can provide you with a multitude of fun facts about capybaras! Suggest new facts in our support server!</p>
-                </div>
-                <div class="feature">
-                    <h3>Reliable Uptime</h3>
-                    <p>You can count on CapyPic to be up and running almost always. CapyPic is proudly hosted on <a href="https://elysiannodes.uk" target="_blank">ElysianNodes</a>, which provides excellent hosting.</p>
-                </div>
-            </div>
         </div>
-
-        <!-- Updates Section -->
-        <div class="section">
+        <div class="cool-thing">
+            <h3>Get Capybara Pictures</h3>
+            <p>With CapyPic's easy <span class="code">/capybara</span> command, you can get a new picture of a capybara with ease. We use the <a href="https://capy.lol/" target="_blank">capy.lol</a> API for capybara pictures.</p>
+        </div>
+        <div class="cool-thing">
+            <h3>Capybara Facts</h3>
+            <p>CapyPic can provide you with a multitude of fun facts about capybaras! Suggest new facts in our support server!</p>
+        </div>
+        <div class="cool-thing">
+            <h3>Reliable Uptime</h3>
+            <p>You can count on CapyPic to be up and running almost always. CapyPic is proudly hosted on <a href="https://elysiannodes.uk" target="_blank">ElysianNodes</a>, which provides excellent hosting.</p>
+        </div>
+    </div>
+    <div id="updates">
+        <div class="section-header">
             <h2>Latest Updates</h2>
-            <div class="updates">
-                <div class="update">
-                    <h3>CapyPic - VERSION 2!</h3>
-                    <p>8 November, 2024: CapyPic has been completely rewritten from messy Discord4J (java) code to new, clean, discord.py (Python) code. We'll also be moving to ElysianNodes for hosting.</p>
-                </div>
-            </div>
+        </div>
+        <div class="cool-thing">
+            <h3>CapyPic - VERSION 2!</h3>
+            <p>8 November, 2024: CapyPic has been completely rewritten from messy Discord4J (java) code to new, clean, discord.py (Python) code. We'll also be moving to ElysianNodes for hosting.</p>
         </div>
     </div>
-
-    <!-- Featured Image Section -->
-    <div class="container">
-        <div class="featured-image-container">
-            <img src="https://rdr.lol/u/ZqfJIh.png" alt="Featured Bot Image">
+    <div id="terms">
+        <div class="section-header">
+            <h2>Terms</h2>
+        </div>
+        <div class="cool-thing">
+            <h3>Terms of Use</h3>
+            <p>You may not use CapyPic in any of the following ways:</p>
+            <ul>
+                <li>Spamming commands to overload the <a href="https://capy.lol" target="_blank">capy.lol</a> API</li>
+                <li>Exploiting bugs. If yo find any please report them in the support server.</li>
+            </ul>
+        </div>
+        <div class="cool-thing">
+            <h3>Privacy Policy</h3>
+            <p>I don't want your information. CapyPic doesn't log users, IP addresses, or anything of use. It only includes basic logging capabilities for debugging and monitoring purposes.</p>
         </div>
     </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <p>&copy; 2024 Jab11n. Some rights reserved.</p>
-        <div class="social-links">
-            <a href="/privacy" target="_blank">Privacy Policy</a> |
-            <a href="/terms" target="_blank">Terms Of Use</a> |
-            <a href="https://discord.gg/3TbqBBEZCC" target="_blank">Support Server</a>
-        </div>
+    <div id="footer">
+        <p>&copy; 2025 Jab11n</p>
     </div>
-
 </body>
 </html>
