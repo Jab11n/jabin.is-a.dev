@@ -95,7 +95,6 @@
             deviceSelect.appendChild(option);
         });
 
-        // Start with the first video device
         if (videoDevices.length > 0) {
             startStream(videoDevices[0].deviceId);
         }
@@ -129,9 +128,9 @@
     document.addEventListener('fullscreenchange', () => {
         const controls = document.getElementById('controls');
         if (document.fullscreenElement) {
-            controls.style.display = 'none'; // Hide controls in fullscreen
+            controls.style.display = 'none';
         } else {
-            controls.style.display = 'block'; // Show controls when not fullscreen
+            controls.style.display = 'block';
         }
     });
 
@@ -154,7 +153,6 @@
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ video: true });
             video.srcObject = stream;
-            // Get video devices after permission is granted
             getVideoDevices();
         } catch (error) {
             console.error('Error accessing camera:', error);
