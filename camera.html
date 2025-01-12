@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Camera Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Online Camera</title>
     <style>
         body {
             display: flex;
@@ -19,7 +20,7 @@
         video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
         #controls {
             position: absolute;
@@ -31,6 +32,8 @@
             color: #fff;
             border: 4px solid midnightblue;
             transition: ease 0.4s all;
+            padding: 10px;
+            border-radius: 20px;
         }
         button:hover {
             background-color: #5248bc;
@@ -42,8 +45,23 @@
             color: #fff;
             border: 4px solid midnightblue;
             transition: ease 0.4s all;
+            padding: 10px;
+            border-radius: 20px;
         }
         #deviceSelect:hover {
+            background-color: #5248bc;
+            color: linen;
+            cursor: pointer;
+        }
+        #captureButton {
+            background-color: #100e24;
+            color: #fff;
+            border: 4px solid midnightblue;
+            transition: ease 0.4s all;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        #captureButton:hover {
             background-color: #5248bc;
             color: linen;
             cursor: pointer;
@@ -54,14 +72,16 @@
     <video id="video" autoplay playsinline></video>
     <div id="controls">
         <select id="deviceSelect"></select>
-        <button id="fullscreenButton">Toggle Fullscreen</button>
-        <button id="mirrorButton">Toggle Mirror</button>
+        <button id="fullscreenButton"><i class="fa-solid fa-maximize"></i>&ensp;Toggle Fullscreen</button>
+        <button id="mirrorButton"><i class="fa-solid fa-rotate"></i>&ensp;Toggle Mirror</button>
+        <button id="captureButton"><i class="fa-solid fa-camera"></i>&ensp;Capture Picture</button>
     </div>
     <script>
     const video = document.getElementById('video');
     const deviceSelect = document.getElementById('deviceSelect');
     const fullscreenButton = document.getElementById('fullscreenButton');
     const mirrorButton = document.getElementById('mirrorButton');
+    const captureButton = document.getElementById('captureButton');
     let isMirrored = false;
 
     async function getVideoDevices() {
@@ -113,6 +133,21 @@
         } else {
             controls.style.display = 'block'; // Show controls when not fullscreen
         }
+    });
+
+    captureButton.addEventListener('click', () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        const context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        const date = new Date();
+        const dateString = date.toISOString().replace(/[:.]/g, '-');
+        link.download = `jab11n-camera-${dateString}.png`;
+        link.click();
     });
 
     async function requestCameraPermission() {
