@@ -67,6 +67,8 @@
                 transition: ease 0.4s all;
             }
             a:hover {
+                padding-left: 6px;
+                padding-right: 6px;
                 background-color: var(--background);
             }
             .socials {
@@ -102,10 +104,15 @@
                 gap: 8px;
                 width: 100%;
             }
+            @media (max-width: 37.5em) { /* 37.5em is approximately 600px */
+                .project-main {
+                    flex-direction: column;
+                }
+            }
             .project img {
                 border-radius: var(--borderRadius2);
-                width: 160px;
-                height: 90px;
+                width: auto;
+                height: 100px;
             }
             .buttons {
                 display: flex;
@@ -197,7 +204,7 @@
             <div class="project">
                 <div class="project-main">
                     <div class="project-info">
-                        <h2>Jabin.is-a.dev (this website)&ensp;<i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i></h2>
+                        <h2>jabin.is-a.dev (this)&ensp;<i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i></h2>
                         <p>This is my main personal website. Here I put some information about me, links to my projects, and even occasionally a tool or something i need to put somewhere.</p>
                     </div>
                     <img src="https://rdr.lol/u/2zoTQP.png" alt="jabin.is-a.dev banner">
