@@ -75,15 +75,30 @@
                 font-size: 24px;
                 margin: 0;
                 padding: 0;
+                display: flex;
+                gap: 10px;
             }
-            .socials a {
+            .socials a, .all-socials a {
                 color: var(--textColor) !important;
                 transition: ease 0.4s all;
                 background: none !important;
             }
-            .socials a:hover {
+            .socials a:hover, .all-socials a:hover {
                 color: var(--link) !important;
                 background: none !important;
+            }
+            .all-socials {
+                display: none;
+                align-items: center;
+                gap: 10px;
+                margin: 0;
+                padding: 0;
+            }
+            #socials-more {
+                cursor: pointer;
+            }
+            #close-all-socials {
+                cursor: pointer;
             }
             .project, .cool-thing {
                 background-color: var(--nestedSection);
@@ -108,6 +123,10 @@
                 border-radius: var(--borderRadius2);
                 width: auto;
                 height: 100px;
+                transition: ease 0.4s all;
+            }
+            .project img:hover {
+                transform: scale(1.05);
             }
             .buttons {
                 display: flex;
@@ -165,13 +184,26 @@
             <p>I'm Jabin. I make cool things for fun! I mostly do stuff on the front end, like websites and clients for stuff, but I also make Discord bots and do some media stuff like video editing.</p>
             <p>I'm a 15 year old high school student, and I am a Christian living in the United States.</p>
             <p>I occasionally use Scratch, where you may know me as <a href="https://scratch.mit.edu/users/-gr" target="_blank">@-gr</a>. I also go by -gr on sites like <a href="https://hatch.lol" target="_blank">Hatch</a>, <a href="https://darflen.com/users/-gr" target="_blank">Darflen</a>, and <a href="https://wasteof.money/-gr" target="_blank">wasteof</a>.</p>
-            <p class="socials">
-                <a href="https://github.com/jab11n" target="_blank"><i class="fa-brands fa-square-github"></i></a>&nbsp;
-                <a href="https://youtube.com/@jab11n" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>&nbsp;
-                <a href="https://twitter.com/jab11n" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>&nbsp;
-                <a href="https://bsky.app/profile/jab11n.bsky.social" target="_blank"><i class="fa-brands fa-square-bluesky"></i></a>&nbsp;
+            <div class="socials">
+                <a href="https://github.com/jab11n" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://x.com/jab11n" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="https://youtube.com/@jab11n" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+                <a href="https://bsky.app/profile/jab11n.tech" target="_blank"><i class="fa-brands fa-square-bluesky"></i></a>
                 <a href="mailto:11@rdr.lol"><i class="fa-solid fa-square-envelope"></i></a>
-            </p>
+                <a id="socials-more"><i class="fa-regular fa-square-plus"></i></a>
+            </div>
+            <div class="all-socials">
+                <a><i class="fa-solid fa-square-xmark" id="close-all-socials"></i></a>
+                <a href="https://github.com/jab11n" target="_blank">GitHub</a>
+                <a href="https://x.com/jab11n" target="_blank">X</a>
+                <a href="https://youtube.com/@jab11n" target="_blank">YouTube</a>
+                <a href="https://bsky.app/profile/jab11n.tech" target="_blank">Bluesky</a>
+                <a href="mailto:11@rdr.lol">Email</a>
+                <a href="https://discord.com/users/964614935298588692" target="_blank">Discord</a>
+                <a href="https://darflen.com/users/-gr" target="_blank">Darflen</a>
+                <a href="https://wasteof.money/-gr" target="_blank">wasteof</a>
+                <a href="https://scratch.mit.edu/users/-gr" target="_blank">Scratch</a>
+            </div>
         </div>
         <div id="projects">
             <div class="section-header">
@@ -229,23 +261,6 @@
                     </button>
                 </div>
             </div>
-            <div class="project">
-                <div class="project-main">
-                    <div class="project-info">
-                        <h2>WatchBot&ensp;<i class="fa-brands fa-python"></i>&nbsp;<i class="fa-brands fa-discord"></i></h2>
-                        <p>WatchBot is a custom self-hostable Discord bot I made that will send a request to your website in an increment of time that you choose and if your website goes down it will let you know in a Discord channel, then it will let you know when it goes up again.<br>This is currently used for monitoring Hatch's API.</p>
-                    </div>
-                    <img src="https://rdr.lol/u/p50cQV.png" alt="watchbot banner">
-                </div>
-                <div class="buttons">
-                    <button onclick="window.open('https://jabin.is-a.dev/watchbot', '_blank')">
-                        <i class="fa-solid fa-computer-mouse fa-xl"></i>&ensp;View Project Website
-                    </button>
-                    <button onclick="window.open('https://github.com/jab11n/watchbot', '_blank')">
-                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on GitHub
-                    </button>
-                </div>
-            </div>
             <p>There is most certainly a project or two I haven't listed here. Check back another time, I guess?</p>
         </div>
         <div id="cool-stuff">
@@ -263,8 +278,7 @@
                 <ul>
                     <li>Windows 11</li>
                     <li>Ubuntu 24.04</li>
-                    <li>Raspberry Pi OS</li>
-                    <li>Xubuntu 24.04</li>
+                    <li>Proxmox</li>
                 </ul>
                 <ul>
                     <li>VSCode</li>
@@ -274,6 +288,7 @@
                     <li>Gnome Terminal</li>
                 </ul>
                 <ul>
+                    <li>Zen Browser</li>
                     <li>Microsoft Edge</li>
                     <li>Firefox Developer Edition</li>
                 </ul>
@@ -281,9 +296,6 @@
                     <li>TurboWarp Desktop</li>
                     <li>Scratch Addons</li>
                     <li>ScratchAttach</li>
-                </ul>
-                <ul>
-                    <li>Discord.py</li>
                 </ul>
                 <ul>
                     <li>Discord</li>
@@ -295,6 +307,7 @@
                     <li>Steam</li>
                     <li>Roblox</li>
                     <li>Minecraft</li>
+                    <li>Lunar Client</li>
                     <li>Fortnite</li>
                     <li>Rocket League</li>
                     <li>Forza Horizon 4</li>
@@ -314,6 +327,10 @@
                     <li>Fans: DeepCool ARGB fans</li>
                     <li>Storage: 2TB PCIe 4 NVMe SSD</li>
                 </ul>
+            </div>
+            <div class="cool-thing">
+                <h2>Selfhosting</h2>
+                <p>I enjoy selfhosting things. I have a Dell Optiplex 7040M with 16GB RAM and 1TB HDD running Proxmox and I use it to selfhost a lot of stuff like Gitea, Discord bots, the Hatch Wiki and Hatch Forums, and whatever needs to be hosted.</p>
             </div>
             <div class="cool-thing">
                 <h2>My Setup</h2>
@@ -338,5 +355,20 @@
         <div id="footer">
             <p>&copy; 2025 Jab11n</p>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const socialsMore = document.querySelector('#socials-more');
+                const allSocials = document.querySelector('.all-socials');
+                const closeAllSocials = document.querySelector('#close-all-socials');
+
+                socialsMore.addEventListener('click', function() {
+                    allSocials.style.display = 'flex';
+                });
+
+                closeAllSocials.addEventListener('click', function() {
+                    allSocials.style.display = 'none';
+                });
+            });
+        </script>
     </body>
 </html>
