@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            jabin.is-a.dev
-        </title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="jabin.is-a.dev | jab11n's website">
-        <meta property="og:description" content="All my projects and information about me">
-        <meta property="og:image" content="/images/j_social.png">
-        <meta property="og:url" content="https://jabin.is-a.dev/">
-        <meta property="og:type" content="website">
-        <meta content="#5248bc" data-react-helmet="true" name="theme-color" />
+        <title>jabin.is-a.dev</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+            integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
             :root {
                 --background: #100e24;
                 --section: #5248bc;
                 --nestedSection: #3b3489;
-                --link: #C5BFFF;
+                --link: #c5bfff;
                 --borderRadius: 20px;
                 --borderRadius2: 10px;
-                --textColor: #FFFFFF;
+                --textColor: #ffffff;
             }
             body {
                 background-color: var(--background);
@@ -30,7 +28,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             }
             #header {
                 width: 100%;
@@ -48,7 +46,10 @@
                 width: 42px;
                 height: 42px;
             }
-            #greeting, #projects, #cool-stuff, #thanks {
+            #greeting,
+            #projects,
+            #cool-stuff,
+            #thanks {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
@@ -61,7 +62,10 @@
                 padding: 14px;
                 box-sizing: border-box;
             }
-            h1, h2, h3, p {
+            h1,
+            h2,
+            h3,
+            p {
                 margin: 0px;
                 padding: 0px;
             }
@@ -84,12 +88,14 @@
                 display: flex;
                 gap: 10px;
             }
-            .socials a, .all-socials a {
+            .socials a,
+            .all-socials a {
                 color: var(--textColor) !important;
                 transition: ease 0.4s all;
                 background: none !important;
             }
-            .socials a:hover, .all-socials a:hover {
+            .socials a:hover,
+            .all-socials a:hover {
                 color: var(--link) !important;
                 background: none !important;
             }
@@ -106,7 +112,8 @@
             #close-all-socials {
                 cursor: pointer;
             }
-            .project, .cool-thing {
+            .project,
+            .cool-thing {
                 background-color: var(--nestedSection);
                 padding: 16px;
                 border-radius: var(--borderRadius);
@@ -129,10 +136,6 @@
                 border-radius: var(--borderRadius2);
                 width: auto;
                 height: 100px;
-                transition: ease 0.4s all;
-            }
-            .project img:hover {
-                transform: scale(1.05);
             }
             .buttons {
                 display: flex;
@@ -167,7 +170,7 @@
                 box-sizing: border-box;
             }
             .code {
-                font-family: 'Courier New', Courier, monospace;
+                font-family: "Courier New", Courier, monospace;
                 background-color: #c4c4c4;
                 color: #000;
                 font-weight: bold;
@@ -179,95 +182,219 @@
     </head>
     <body>
         <div id="header">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.94 328.59" width="226.94" height="328.59">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 226.94 328.59"
+                width="226.94"
+                height="328.59"
+            >
                 <g transform="translate(-126.33 -12.57)">
-                    <path d="M197.5 142l84-31-1.94 155-81.07 5 4.95-57s-10.58.97-23.51-8.74c-23.8-17.86-29.43 12.74-29.43 12.74l-7 106 184-12 9-276-151 57" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="10"/>
+                    <path
+                        d="M197.5 142l84-31-1.94 155-81.07 5 4.95-57s-10.58.97-23.51-8.74c-23.8-17.86-29.43 12.74-29.43 12.74l-7 106 184-12 9-276-151 57"
+                        fill="none"
+                        stroke="#FFFFFF"
+                        stroke-width="32"
+                        stroke-linecap="round"
+                        stroke-linejoin="miter"
+                        stroke-miterlimit="10"
+                    />
                 </g>
-            </svg>  
+            </svg>
         </div>
         <div id="greeting">
             <h1>👋 Hello! I'm Jab11n.</h1>
-            <p>I'm Jabin. I make cool things for fun! I mostly do stuff on the front end, like websites and clients for stuff, but I also make Discord bots and do some media stuff like video editing.</p>
-            <p>I'm a 15 year old high school student, and I am a Christian living in the United States.</p>
-            <p>I occasionally use Scratch, where you may know me as <a href="https://scratch.mit.edu/users/-gr" target="_blank">@-gr</a>. I also go by -gr on sites like <a href="https://hatch.lol" target="_blank">Hatch</a>, <a href="https://darflen.com/users/-gr" target="_blank">Darflen</a>, and <a href="https://wasteof.money/-gr" target="_blank">wasteof</a>.</p>
+            <p>
+                I'm Jabin. I make cool things for fun! I mostly do stuff on the
+                front end, like websites and clients for stuff, but I also make
+                Discord bots and do some media stuff like video editing.
+            </p>
+            <p>
+                I'm a 15 year old high school student, and I am a Christian
+                living in the United States.
+            </p>
+            <p>
+                I occasionally use Scratch, where you may know me as
+                <a href="https://scratch.mit.edu/users/-gr" target="_blank"
+                    >@-gr</a
+                >. I also go by -gr on sites like
+                <a href="https://hatch.lol" target="_blank">Hatch</a>,
+                <a href="https://darflen.com/users/-gr" target="_blank"
+                    >Darflen</a
+                >, and
+                <a href="https://wasteof.money/-gr" target="_blank">wasteof</a>.
+            </p>
             <div class="socials">
-                <a href="https://github.com/jab11n" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-                <a href="https://x.com/jab11n" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
-                <a href="https://youtube.com/@jab11n" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
-                <a href="https://bsky.app/profile/jab11n.tech" target="_blank"><i class="fa-brands fa-square-bluesky"></i></a>
-                <a href="mailto:11@rdr.lol"><i class="fa-solid fa-square-envelope"></i></a>
-                <a id="socials-more"><i class="fa-regular fa-square-plus"></i></a>
+                <a href="https://github.com/jab11n" target="_blank"
+                    ><i class="fa-brands fa-square-github"></i
+                ></a>
+                <a href="https://x.com/jab11n" target="_blank"
+                    ><i class="fa-brands fa-square-x-twitter"></i
+                ></a>
+                <a href="https://youtube.com/@jab11n" target="_blank"
+                    ><i class="fa-brands fa-square-youtube"></i
+                ></a>
+                <a href="https://bsky.app/profile/jab11n.tech" target="_blank"
+                    ><i class="fa-brands fa-square-bluesky"></i
+                ></a>
+                <a href="mailto:11@rdr.lol"
+                    ><i class="fa-solid fa-square-envelope"></i
+                ></a>
+                <a id="socials-more"
+                    ><i class="fa-regular fa-square-plus"></i
+                ></a>
             </div>
             <div class="all-socials">
-                <a><i class="fa-solid fa-square-xmark" id="close-all-socials"></i></a>
+                <a
+                    ><i
+                        class="fa-solid fa-square-xmark"
+                        id="close-all-socials"
+                    ></i
+                ></a>
                 <a href="https://github.com/jab11n" target="_blank">GitHub</a>
                 <a href="https://x.com/jab11n" target="_blank">X</a>
-                <a href="https://youtube.com/@jab11n" target="_blank">YouTube</a>
-                <a href="https://bsky.app/profile/jab11n.tech" target="_blank">Bluesky</a>
+                <a href="https://youtube.com/@jab11n" target="_blank"
+                    >YouTube</a
+                >
+                <a href="https://bsky.app/profile/jab11n.tech" target="_blank"
+                    >Bluesky</a
+                >
                 <a href="mailto:11@rdr.lol">Email</a>
-                <a href="https://discord.com/users/964614935298588692" target="_blank">Discord</a>
-                <a href="https://darflen.com/users/-gr" target="_blank">Darflen</a>
+                <a
+                    href="https://discord.com/users/964614935298588692"
+                    target="_blank"
+                    >Discord</a
+                >
+                <a href="https://darflen.com/users/-gr" target="_blank"
+                    >Darflen</a
+                >
                 <a href="https://wasteof.money/-gr" target="_blank">wasteof</a>
-                <a href="https://scratch.mit.edu/users/-gr" target="_blank">Scratch</a>
+                <a href="https://scratch.mit.edu/users/-gr" target="_blank"
+                    >Scratch</a
+                >
             </div>
         </div>
         <div id="projects">
             <div class="section-header">
                 <h1>Projects</h1>
-                <p>Here are some of the projects I've made, am working on, or have contributed to:</p>
+                <p>
+                    Here are some of the projects I've made, am working on, or
+                    have contributed to:
+                </p>
             </div>
             <div class="project">
                 <div class="project-main">
                     <div class="project-info">
-                        <h2>Hatch&ensp;<i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i>&nbsp;<i class="fa-brands fa-js-square"></i>&nbsp;<i class="fa-brands fa-rust"></i></h2>
-                        <p>Hatch is a Scratch-compatible project sharing website made by me and some other people. It's designed to be like Scratch but more advanced, with TurboWarp extension support and many new social features. Note: this is not a Scratch mod, simply just a social website for sharing projects.</p>
+                        <h2>
+                            Hatch&ensp;<i class="fa-brands fa-html5"></i
+                            >&nbsp;<i class="fa-brands fa-css3-alt"></i>&nbsp;<i
+                                class="fa-brands fa-js-square"
+                            ></i
+                            >&nbsp;<i class="fa-brands fa-rust"></i>
+                        </h2>
+                        <p>
+                            Hatch is a Scratch-compatible project sharing
+                            website made by me and some other people. It's
+                            designed to be like Scratch but more advanced, with
+                            TurboWarp extension support and many new social
+                            features. Note: this is not a Scratch mod, simply
+                            just a social website for sharing projects.
+                        </p>
                     </div>
-                    <img src="https://rdr.lol/u/GBc7y6.png" alt="hatch banner">
+                    <img
+                        src="https://rdr.lol/u/GBc7y6.png"
+                        alt="hatch banner"
+                    />
                 </div>
                 <div class="buttons">
-                    <button onclick="window.open('https://hatch.lol', '_blank')">
-                        <i class="fa-solid fa-computer-mouse fa-xl"></i>&ensp;View Project (hatch.lol)
+                    <button
+                        onclick="window.open('https://hatch.lol', '_blank')"
+                    >
+                        <i class="fa-solid fa-computer-mouse fa-xl"></i
+                        >&ensp;View Project (hatch.lol)
                     </button>
-                    <button onclick="window.open('https://github.com/hatchdotlol', '_blank')">
-                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on GitHub
+                    <button
+                        onclick="window.open('https://github.com/hatchdotlol', '_blank')"
+                    >
+                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on
+                        GitHub
                     </button>
                 </div>
             </div>
             <div class="project">
                 <div class="project-main">
                     <div class="project-info">
-                        <h2>jabin.is-a.dev (this)&ensp;<i class="fa-brands fa-html5"></i>&nbsp;<i class="fa-brands fa-css3-alt"></i></h2>
-                        <p>This is my main personal website. Here I put some information about me, links to my projects, and even occasionally a tool or something i need to put somewhere.</p>
+                        <h2>
+                            jabin.is-a.dev (this)&ensp;<i
+                                class="fa-brands fa-html5"
+                            ></i
+                            >&nbsp;<i class="fa-brands fa-css3-alt"></i>
+                        </h2>
+                        <p>
+                            This is my main personal website. Here I put some
+                            information about me, links to my projects, and even
+                            occasionally a tool or something i need to put
+                            somewhere.
+                        </p>
                     </div>
-                    <img src="https://rdr.lol/u/2zoTQP.png" alt="jabin.is-a.dev banner">
+                    <img
+                        src="https://rdr.lol/u/2zoTQP.png"
+                        alt="jabin.is-a.dev banner"
+                    />
                 </div>
                 <div class="buttons">
-                    <button onclick="window.open('https://jabin.is-a.dev', '_blank')">
-                        <i class="fa-solid fa-computer-mouse fa-xl"></i>&ensp;View Project (you're already here)
+                    <button
+                        onclick="window.open('https://jabin.is-a.dev', '_blank')"
+                    >
+                        <i class="fa-solid fa-computer-mouse fa-xl"></i
+                        >&ensp;View Project (you're already here)
                     </button>
-                    <button onclick="window.open('https://github.com/jab11n/jabin.is-a.dev', '_blank')">
-                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on GitHub
+                    <button
+                        onclick="window.open('https://github.com/jab11n/jabin.is-a.dev', '_blank')"
+                    >
+                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on
+                        GitHub
                     </button>
                 </div>
             </div>
             <div class="project">
                 <div class="project-main">
                     <div class="project-info">
-                        <h2>CapyPic&ensp;<i class="fa-brands fa-python"></i>&nbsp;<i class="fa-brands fa-discord"></i></h2>
-                        <p>CapyPic is a hosted Discord bot that automatically fetches capybara images for you! It has a super easy slash command to get you a cute picture of a capybara. You can add it to your Discord server or modify the source code and self-host your own bot!</p>
+                        <h2>
+                            CapyPic&ensp;<i class="fa-brands fa-python"></i
+                            >&nbsp;<i class="fa-brands fa-discord"></i>
+                        </h2>
+                        <p>
+                            CapyPic is my Discord bot that automatically fetches
+                            capybara images for you! It has a super easy slash
+                            command to get you a cute picture of a capybara.
+                            It's no longer hosted, but you may host it yourself
+                            or modify the source code if you'd like.
+                        </p>
                     </div>
-                    <img src="https://rdr.lol/u/oa5K5Y.png" alt="capypic banner">
+                    <img
+                        src="https://rdr.lol/u/oa5K5Y.png"
+                        alt="capypic banner"
+                    />
                 </div>
                 <div class="buttons">
-                    <button onclick="window.open('https://jabin.is-a.dev/capypic', '_blank')">
-                        <i class="fa-solid fa-computer-mouse fa-xl"></i>&ensp;View Project Website
+                    <button
+                        onclick="window.open('https://jabin.is-a.dev/capypic', '_blank')"
+                    >
+                        <i class="fa-solid fa-computer-mouse fa-xl"></i
+                        >&ensp;View Project Website
                     </button>
-                    <button onclick="window.open('https://github.com/Jab11n/CapyPic', '_blank')">
-                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on GitHub
+                    <button
+                        onclick="window.open('https://github.com/Jab11n/CapyPic', '_blank')"
+                    >
+                        <i class="fa-brands fa-github fa-xl"></i>&ensp;View on
+                        GitHub
                     </button>
                 </div>
             </div>
-            <p>There is most certainly a project or two I haven't listed here. Check back another time, I guess?</p>
+            <p>
+                There is most certainly a project or two I haven't listed here.
+                Check back another time, I guess?
+            </p>
         </div>
         <div id="cool-stuff">
             <div class="section-header">
@@ -276,11 +403,21 @@
             </div>
             <div class="cool-thing">
                 <h2>Languages</h2>
-                <p><i class="fa-brands fa-html5 fa-xl"></i>&nbsp;<i class="fa-brands fa-css3-alt fa-xl"></i>&nbsp;<i class="fa-brands fa-python fa-xl"></i>&nbsp;<i class="fa-brands fa-java fa-xl"></i>&ensp;<i>i'm learning more languages i promise!!!</i></p>
+                <p>
+                    <i class="fa-brands fa-html5 fa-xl"></i>&nbsp;<i
+                        class="fa-brands fa-css3-alt fa-xl"
+                    ></i
+                    >&nbsp;<i class="fa-brands fa-python fa-xl"></i>&nbsp;<i
+                        class="fa-brands fa-java fa-xl"
+                    ></i
+                    >&ensp;<i>i'm learning more languages i promise!!!</i>
+                </p>
             </div>
             <div class="cool-thing">
                 <h2>Software</h2>
-                <p>There aren't icons for all of these, so I'll just name them:</p>
+                <p>
+                    There aren't icons for all of these, so I'll just name them:
+                </p>
                 <ul>
                     <li>Windows 11</li>
                     <li>Ubuntu 24.04</li>
@@ -336,21 +473,59 @@
             </div>
             <div class="cool-thing">
                 <h2>Selfhosting</h2>
-                <p>I enjoy selfhosting things. I have a Dell Optiplex 7040M with 16GB RAM and 1TB HDD running Proxmox and I use it to selfhost a lot of stuff like Gitea, Discord bots, the Hatch Wiki and Hatch Forums, and whatever needs to be hosted.</p>
+                <p>
+                    I enjoy selfhosting things. I have a Dell Optiplex 7040M
+                    with 16GB RAM and 1TB HDD running Proxmox and I use it to
+                    selfhost a lot of stuff like Gitea, Discord bots, the Hatch
+                    Wiki and Hatch Forums, and whatever needs to be hosted.
+                </p>
             </div>
             <div class="cool-thing">
                 <h2>My Setup</h2>
                 <p>I have these items that I use for technological purposes!</p>
                 <ul>
-                    <li>Keyboard: Perixx PERIBOARD-335BL Wired Ergonomic Mechanical Compact Keyboard (split keyboard 😱)</li>
-                    <li>Mouse: Logitech M720 Triathlon Multi-Device Wireless Mouse</li>
-                    <li>Main monitor: AOPEN Fire Legend 1080p 27" 240hz gaming monitor</li>
-                    <li>Secondary monitor: HannSpree monitor thing idk i got at a garage sale for $2, it is less than 1080p, 60hz</li>
-                    <li>Tertiary monitor: Gateway something @ 1600x900px that I got for $10 at a thrift store. 75hz.</li>
-                    <li>Jailbroken Chromebook: I have this Lenovo Phaser360 Chromebook I used <a href="https://mrchromebox.tech" target="_blank">mrchromebox</a> firmware on. I currently have it running Ubuntu 24.04, but previously it ran Xubuntu 24.04, and prior to that it ran Windows 10. Helpfully, it is 64-bit so I don't have to deal with lacking ARM support.</li>
-                    <li>Raspberry Pi 4 4gb which currently runs some Discord bots</li>
+                    <li>
+                        Keyboard: Perixx PERIBOARD-335BL Wired Ergonomic
+                        Mechanical Compact Keyboard (split keyboard 😱)
+                    </li>
+                    <li>
+                        Mouse: Logitech M720 Triathlon Multi-Device Wireless
+                        Mouse
+                    </li>
+                    <li>
+                        Main monitor: AOPEN Fire Legend 1080p 27" 240hz gaming
+                        monitor
+                    </li>
+                    <li>
+                        Secondary monitor: HannSpree monitor thing idk i got at
+                        a garage sale for $2, it is less than 1080p, 60hz
+                    </li>
+                    <li>
+                        Tertiary monitor: Gateway something @ 1600x900px that I
+                        got for $10 at a thrift store. 75hz.
+                    </li>
+                    <li>
+                        Jailbroken Chromebook: I have this Lenovo Phaser360
+                        Chromebook I used
+                        <a href="https://mrchromebox.tech" target="_blank"
+                            >mrchromebox</a
+                        >
+                        firmware on. I currently have it running Ubuntu 24.04,
+                        but previously it ran Xubuntu 24.04, and prior to that
+                        it ran Windows 10. Helpfully, it is 64-bit so I don't
+                        have to deal with lacking ARM support.
+                    </li>
+                    <li>
+                        Raspberry Pi 4 4gb which currently runs some Discord
+                        bots
+                    </li>
                     <li>Microphone: FiFine Ampligame A6T</li>
-                    <li>Headset: FiFine Ampligame H9 PC Gaming Headset, USB Headset with 7.1 Surround Sound, Detachable Microphone, Control Box, 3.5mm Headphones Jack, Over-Ear Wired Headset</li>
+                    <li>
+                        Headset: FiFine Ampligame H9 PC Gaming Headset, USB
+                        Headset with 7.1 Surround Sound, Detachable Microphone,
+                        Control Box, 3.5mm Headphones Jack, Over-Ear Wired
+                        Headset
+                    </li>
                     <li>Phone: Google Pixel 7a with Nova Launcher</li>
                 </ul>
             </div>
@@ -362,17 +537,18 @@
             <p>&copy; 2025 Jab11n</p>
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const socialsMore = document.querySelector('#socials-more');
-                const allSocials = document.querySelector('.all-socials');
-                const closeAllSocials = document.querySelector('#close-all-socials');
+            document.addEventListener("DOMContentLoaded", function () {
+                const socialsMore = document.querySelector("#socials-more");
+                const allSocials = document.querySelector(".all-socials");
+                const closeAllSocials =
+                    document.querySelector("#close-all-socials");
 
-                socialsMore.addEventListener('click', function() {
-                    allSocials.style.display = 'flex';
+                socialsMore.addEventListener("click", function () {
+                    allSocials.style.display = "flex";
                 });
 
-                closeAllSocials.addEventListener('click', function() {
-                    allSocials.style.display = 'none';
+                closeAllSocials.addEventListener("click", function () {
+                    allSocials.style.display = "none";
                 });
             });
         </script>

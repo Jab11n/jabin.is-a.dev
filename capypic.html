@@ -1,212 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CapyPic</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta property="og:title" content="CapyPic | jabin.is-a.dev">
-    <meta property="og:description" content="The ultimate Discord bot for capybara pictures!">
-    <meta property="og:image" content="https://rdr.lol/u/oa5K5Y.png">
-    <meta property="og:url" content="https://jabin.is-a.dev/capypic">
-    <meta property="og:type" content="website">
-    <meta content="#5248bc" data-react-helmet="true" name="theme-color" />
-    <style>
-        :root {
-            --background: #100e24;
-            --section: #5248bc;
-            --nestedSection: #3b3489;
-            --link: #C5BFFF;
-            --borderRadius: 20px;
-            --borderRadius2: 10px;
-            --textColor: #FFFFFF;
-        }
-        body {
-            background-color: var(--background);
-            color: var(--textColor);
-            padding: 0px;
-            margin: 0px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        #header {
-            width: 100%;
-            height: 64px;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            position: sticky;
-            top: 0;
-            background-color: rgba(16, 14, 36, 0.2);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-        }
-        #header svg {
-            width: 42px;
-            height: 42px;
-        }
-        #capypic, #features, #updates, #terms {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-            max-width: 600px;
-            background-color: var(--section);
-            border-radius: var(--borderRadius);
-            padding: 14px;
-            box-sizing: border-box;
-        }
-        h1, h2, h3, p {
-            margin: 0px;
-            padding: 0px;
-        }
-        a {
-            color: var(--link);
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: var(--borderRadius2);
-            transition: ease 0.4s all;
-        }
-        a:hover {
-            background-color: var(--background);
-        }
-        .buttons {
-            display: flex;
-            gap: 8px;
-        }
-        button {
-            width: 100%;
-            min-height: 46px;
-            align-items: center;
-            background-color: var(--nestedSection);
-            color: var(--textColor);
-            border: none;
-            border-radius: var(--borderRadius2);
-            padding: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            border: 4px solid var(--nestedSection);
-            transition: ease 0.4s all;
-        }
-        button:hover {
-            background-color: var(--background);
-        }
-        .cool-thing {
-            background-color: var(--nestedSection);
-            padding: 16px;
-            border-radius: var(--borderRadius);
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .cool-thing img {
-            max-width: 100%;
-            height: auto;
-            border-radius: var(--borderRadius2);
-            border: 5px solid var(--section);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-        #footer {
-            background-color: var(--section);
-            padding: 8px;
-            text-align: center;
-            width: 100%;
-            height: 64px;
-            box-sizing: border-box;
-        }
-        ul {
-            margin: 0;
-        }
-        .code {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #c4c4c4;
-            color: #000;
-            font-weight: bold;
-            padding-left: 3px;
-            padding-right: 3px;
-            border-radius: 4px;;
-        }
-    </style>
-</head>
-<body>
-    <div id="header">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.94 328.59" width="226.94" height="328.59">
-            <g transform="translate(-126.33 -12.57)">
-                <path d="M197.5 142l84-31-1.94 155-81.07 5 4.95-57s-10.58.97-23.51-8.74c-23.8-17.86-29.43 12.74-29.43 12.74l-7 106 184-12 9-276-151 57" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="10"/>
-            </g>
-        </svg>
-    </div>
-    <div id="capypic">
-        <h1>CapyPic</h1>
-        <p>Fetch capybara pictures in your Discord server!</p>
-        <div class="buttons">
-            <button onclick="window.open('https://rdr.lol/go/invitecapypic', '_blank')">
-                <i class="fa-solid fa-plus fa-xl"></i>&ensp;Add Bot
-            </button>
-            <button onclick="window.open('https://discord.gg/3TbqBBEZCC', '_blank')">
-                <i class="fa-brands fa-discord fa-xl"></i>&ensp;Join Server
-            </button>
-            <button onclick="window.open('https://github.com/Jab11n/CapyPic', '_blank')">
-                <i class="fa-brands fa-github fa-xl"></i>&ensp;Source Code
-            </button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CapyPic</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+            integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <meta property="og:title" content="CapyPic | jabin.is-a.dev" />
+        <meta
+            property="og:description"
+            content="The ultimate Discord bot for capybara pictures!"
+        />
+        <meta property="og:image" content="https://rdr.lol/u/oa5K5Y.png" />
+        <meta property="og:url" content="https://jabin.is-a.dev/capypic" />
+        <meta property="og:type" content="website" />
+        <meta content="#5248bc" data-react-helmet="true" name="theme-color" />
+        <style>
+            :root {
+                --background: #100e24;
+                --section: #5248bc;
+                --nestedSection: #3b3489;
+                --link: #c5bfff;
+                --borderRadius: 20px;
+                --borderRadius2: 10px;
+                --textColor: #ffffff;
+            }
+            body {
+                background-color: var(--background);
+                color: var(--textColor);
+                padding: 0px;
+                margin: 0px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #header {
+                width: 100%;
+                height: 64px;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                position: sticky;
+                top: 0;
+                background-color: rgba(16, 14, 36, 0.2);
+                backdrop-filter: blur(10px);
+                z-index: 1000;
+            }
+            #header svg {
+                width: 42px;
+                height: 42px;
+            }
+            #capypic,
+            #features,
+            #updates,
+            #terms {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                max-width: 600px;
+                background-color: var(--section);
+                border-radius: var(--borderRadius);
+                padding: 14px;
+                box-sizing: border-box;
+            }
+            h1,
+            h2,
+            h3,
+            p {
+                margin: 0px;
+                padding: 0px;
+            }
+            a {
+                color: var(--link);
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: var(--borderRadius2);
+                transition: ease 0.4s all;
+            }
+            a:hover {
+                background-color: var(--background);
+            }
+            .buttons {
+                display: flex;
+                gap: 8px;
+            }
+            button {
+                width: 100%;
+                min-height: 46px;
+                align-items: center;
+                background-color: var(--nestedSection);
+                color: var(--textColor);
+                border: none;
+                border-radius: var(--borderRadius2);
+                padding: 8px;
+                font-weight: bold;
+                cursor: pointer;
+                border: 4px solid var(--nestedSection);
+                transition: ease 0.4s all;
+            }
+            button:hover {
+                background-color: var(--background);
+            }
+            .cool-thing {
+                background-color: var(--nestedSection);
+                padding: 16px;
+                border-radius: var(--borderRadius);
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            .cool-thing img {
+                max-width: 100%;
+                height: auto;
+                border-radius: var(--borderRadius2);
+                border: 5px solid var(--section);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+            #footer {
+                background-color: var(--section);
+                padding: 8px;
+                text-align: center;
+                width: 100%;
+                height: 64px;
+                box-sizing: border-box;
+            }
+            ul {
+                margin: 0;
+            }
+            .code {
+                font-family: "Courier New", Courier, monospace;
+                background-color: #c4c4c4;
+                color: #000;
+                font-weight: bold;
+                padding-left: 3px;
+                padding-right: 3px;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 226.94 328.59"
+                width="226.94"
+                height="328.59"
+            >
+                <g transform="translate(-126.33 -12.57)">
+                    <path
+                        d="M197.5 142l84-31-1.94 155-81.07 5 4.95-57s-10.58.97-23.51-8.74c-23.8-17.86-29.43 12.74-29.43 12.74l-7 106 184-12 9-276-151 57"
+                        fill="none"
+                        stroke="#FFFFFF"
+                        stroke-width="32"
+                        stroke-linecap="round"
+                        stroke-linejoin="miter"
+                        stroke-miterlimit="10"
+                    />
+                </g>
+            </svg>
         </div>
-        <div class="cool-thing">
-            <img src="https://rdr.lol/u/gB1VM9.png" alt="Featured Bot Image">
+        <div id="capypic">
+            <h1>The End of CapyPic ❤️</h1>
+            <p>
+                CapyPic has shut down. Thanks to everyone who used it and
+                contributed.
+            </p>
+            <div class="buttons">
+                <button
+                    onclick="window.open('https://github.com/Jab11n/CapyPic', '_blank')"
+                >
+                    <i class="fa-brands fa-github fa-xl"></i>&ensp;Source Code
+                </button>
+            </div>
+            <p>
+                CapyPic remains open source, you can do with the source code
+                what you like.
+            </p>
+            <div class="cool-thing">
+                <img
+                    src="https://rdr.lol/u/gB1VM9.png"
+                    alt="Featured Bot Image"
+                />
+            </div>
         </div>
-    </div>
-    <div id="features">
-        <div class="section-header">
-            <h2>Features</h2>
+        <div id="terms">
+            <div class="section-header">
+                <h2>Terms</h2>
+            </div>
+            <div class="cool-thing">
+                <h3>Terms of Use</h3>
+                <p>You may not use CapyPic in any of the following ways:</p>
+                <ul>
+                    <li>
+                        Spamming commands to overload the
+                        <a href="https://capy.lol" target="_blank">capy.lol</a>
+                        API, Discord API, or bot.
+                    </li>
+                    <li>
+                        Exploiting bugs. If you find any please report them in
+                        the support server.
+                    </li>
+                </ul>
+            </div>
+            <div class="cool-thing">
+                <h3>Privacy Policy</h3>
+                <p>
+                    I don't want your information. CapyPic doesn't log users, IP
+                    addresses, or anything of use. It only includes basic
+                    logging capabilities for debugging and monitoring purposes.
+                </p>
+            </div>
         </div>
-        <div class="cool-thing">
-            <h3>Get Capybara Pictures</h3>
-            <p>With CapyPic's easy <span class="code">/capybara</span> command, you can get a new picture of a capybara with ease. We use the <a href="https://capy.lol/" target="_blank">capy.lol</a> API for capybara pictures.</p>
+        <div id="footer">
+            <p>&copy; 2025 Jab11n</p>
         </div>
-        <div class="cool-thing">
-            <h3>Capybara Facts</h3>
-            <p>CapyPic can provide you with a multitude of fun facts about capybaras! Suggest new facts in our support server!</p>
-        </div>
-        <div class="cool-thing">
-            <h3>Reliable Uptime</h3>
-            <p>You can count on CapyPic to be up and running almost always. CapyPic is currently hosted on my personal server.</p>
-        </div>
-    </div>
-    <div id="updates">
-        <div class="section-header">
-            <h2>Latest Updates</h2>
-        </div>
-        <div class="cool-thing">
-            <h3>Hosting Update</h3>
-            <p>CapyPic is now hosted on my own server for easier maintenance, control, and security.</p>
-        </div>
-        <div class="cool-thing">
-            <h3>CapyPic - VERSION 2!</h3>
-            <p>8 November, 2024: CapyPic has been completely rewritten from messy Discord4J (Java) code to new discord.py (Python) code. We'll also be moving to ElysianNodes for hosting.</p>
-        </div>
-    </div>
-    <div id="terms">
-        <div class="section-header">
-            <h2>Terms</h2>
-        </div>
-        <div class="cool-thing">
-            <h3>Terms of Use</h3>
-            <p>You may not use CapyPic in any of the following ways:</p>
-            <ul>
-                <li>Spamming commands to overload the <a href="https://capy.lol" target="_blank">capy.lol</a> API, Discord API, or bot.</li>
-                <li>Exploiting bugs. If you find any please report them in the support server.</li>
-            </ul>
-        </div>
-        <div class="cool-thing">
-            <h3>Privacy Policy</h3>
-            <p>I don't want your information. CapyPic doesn't log users, IP addresses, or anything of use. It only includes basic logging capabilities for debugging and monitoring purposes.</p>
-        </div>
-    </div>
-    <div id="footer">
-        <p>&copy; 2025 Jab11n</p>
-    </div>
-</body>
+    </body>
 </html>
