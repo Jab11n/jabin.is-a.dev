@@ -1,0 +1,167 @@
+:root {
+    --background: #100e24;
+    --section: #5248bc;
+    --nestedSection: #3b3489;
+    --link: #c5bfff;
+    --borderRadius: 20px;
+    --borderRadius2: 10px;
+    --textColor: #ffffff;
+}
+body {
+    background-color: var(--background);
+    color: var(--textColor);
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#header {
+    width: 100%;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: rgba(16, 14, 36, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+#header svg {
+    width: 42px;
+    height: 42px;
+}
+#greeting,
+#projects,
+#cool-stuff,
+#thanks {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--section);
+    border-radius: var(--borderRadius);
+    padding: 14px;
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+p {
+    margin: 0px;
+    padding: 0px;
+}
+a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: var(--borderRadius2);
+    transition: ease 0.4s all;
+}
+a:hover {
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: var(--background);
+}
+.socials {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+.socials a,
+.all-socials a {
+    color: var(--textColor) !important;
+    transition: ease 0.4s all;
+    background: none !important;
+}
+.socials a:hover,
+.all-socials a:hover {
+    color: var(--link) !important;
+    background: none !important;
+}
+.all-socials {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+#socials-more {
+    cursor: pointer;
+}
+#close-all-socials {
+    cursor: pointer;
+}
+.project,
+.cool-thing {
+    background-color: var(--nestedSection);
+    padding: 16px;
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.project-main {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+.project img {
+    border-radius: var(--borderRadius2);
+    width: auto;
+    height: 100px;
+}
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+.buttons button {
+    width: 100%;
+    min-height: 46px;
+    align-items: center;
+    background-color: var(--section);
+    color: var(--textColor);
+    border: none;
+    border-radius: var(--borderRadius2);
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 4px solid var(--section);
+    transition: ease 0.4s all;
+}
+.buttons button:hover {
+    background-color: var(--background);
+}
+ul {
+    margin: 0;
+}
+#footer {
+    background-color: var(--section);
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    height: 64px;
+    box-sizing: border-box;
+}
+.code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #c4c4c4;
+    color: #000;
+    font-weight: bold;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 4px;
+}

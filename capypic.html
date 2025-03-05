@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CapyPic</title>
+        <title>CapyPic | Jab11n</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -11,7 +11,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <meta property="og:title" content="CapyPic | jabin.is-a.dev" />
+        <meta property="og:title" content="CapyPic | Jab11n" />
         <meta
             property="og:description"
             content="The ultimate Discord bot for capybara pictures!"
@@ -20,132 +20,8 @@
         <meta property="og:url" content="https://jabin.is-a.dev/capypic" />
         <meta property="og:type" content="website" />
         <meta content="#5248bc" data-react-helmet="true" name="theme-color" />
-        <style>
-            :root {
-                --background: #100e24;
-                --section: #5248bc;
-                --nestedSection: #3b3489;
-                --link: #c5bfff;
-                --borderRadius: 20px;
-                --borderRadius2: 10px;
-                --textColor: #ffffff;
-            }
-            body {
-                background-color: var(--background);
-                color: var(--textColor);
-                padding: 0px;
-                margin: 0px;
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            }
-            #header {
-                width: 100%;
-                height: 64px;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                position: sticky;
-                top: 0;
-                background-color: rgba(16, 14, 36, 0.2);
-                backdrop-filter: blur(10px);
-                z-index: 1000;
-            }
-            #header svg {
-                width: 42px;
-                height: 42px;
-            }
-            #capypic,
-            #features,
-            #updates,
-            #terms {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                margin-left: auto;
-                margin-right: auto;
-                width: 100%;
-                max-width: 600px;
-                background-color: var(--section);
-                border-radius: var(--borderRadius);
-                padding: 14px;
-                box-sizing: border-box;
-            }
-            h1,
-            h2,
-            h3,
-            p {
-                margin: 0px;
-                padding: 0px;
-            }
-            a {
-                color: var(--link);
-                text-decoration: none;
-                font-weight: bold;
-                border-radius: var(--borderRadius2);
-                transition: ease 0.4s all;
-            }
-            a:hover {
-                background-color: var(--background);
-            }
-            .buttons {
-                display: flex;
-                gap: 8px;
-            }
-            button {
-                width: 100%;
-                min-height: 46px;
-                align-items: center;
-                background-color: var(--nestedSection);
-                color: var(--textColor);
-                border: none;
-                border-radius: var(--borderRadius2);
-                padding: 8px;
-                font-weight: bold;
-                cursor: pointer;
-                border: 4px solid var(--nestedSection);
-                transition: ease 0.4s all;
-            }
-            button:hover {
-                background-color: var(--background);
-            }
-            .cool-thing {
-                background-color: var(--nestedSection);
-                padding: 16px;
-                border-radius: var(--borderRadius);
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-            }
-            .cool-thing img {
-                max-width: 100%;
-                height: auto;
-                border-radius: var(--borderRadius2);
-                border: 5px solid var(--section);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            }
-            #footer {
-                background-color: var(--section);
-                padding: 8px;
-                text-align: center;
-                width: 100%;
-                height: 64px;
-                box-sizing: border-box;
-            }
-            ul {
-                margin: 0;
-            }
-            .code {
-                font-family: "Courier New", Courier, monospace;
-                background-color: #c4c4c4;
-                color: #000;
-                font-weight: bold;
-                padding-left: 3px;
-                padding-right: 3px;
-                border-radius: 4px;
-            }
-        </style>
+        <link rel="stylesheet" href="root.css" />
+        <link rel="icon" href="favicon.ico" />
     </head>
     <body>
         <div id="header">
