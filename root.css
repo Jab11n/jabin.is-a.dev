@@ -7,6 +7,9 @@
     --borderRadius2: 10px;
     --textColor: #ffffff;
 }
+* {
+    transition: 0.4s ease all;
+}
 body {
     background-color: var(--background);
     color: var(--textColor);
@@ -167,12 +170,16 @@ ul {
     padding: 8px;
     text-align: center;
     width: 100%;
+    padding-bottom: 12px;
     height: 40px;
     box-sizing: border-box;
     position: fixed;
     bottom: 0;
     z-index: 1000;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 .code {
     font-family: "Courier New", Courier, monospace;

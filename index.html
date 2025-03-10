@@ -357,6 +357,19 @@
                 </ul>
             </div>
         </div>
+        <button
+            id="themechange"
+            style="
+                max-width: 600px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                border-radius: 20px;
+            "
+        >
+            Change Theme
+        </button>
         <div id="footer">
             <p>Thanks for visiting! | &copy; 2025 Jab11n</p>
         </div>
@@ -373,6 +386,27 @@
 
                 closeAllSocials.addEventListener("click", function () {
                     allSocials.style.display = "none";
+                });
+
+                const themeButton = document.getElementById("themechange");
+                const root = document.documentElement;
+
+                themeButton.addEventListener("click", function () {
+                    if (
+                        root.style.getPropertyValue("--background") == "#100e24"
+                    ) {
+                        root.style.setProperty("--background", "#C7C2FE");
+                        root.style.setProperty("--section", "#968FD9");
+                        root.style.setProperty("--nestedSection", "#bba8ff");
+                        root.style.setProperty("--link", "#3b3489");
+                        root.style.setProperty("--textColor", "#000000");
+                    } else {
+                        root.style.setProperty("--background", "#100e24");
+                        root.style.setProperty("--section", "#5248bc");
+                        root.style.setProperty("--nestedSection", "#3b3489");
+                        root.style.setProperty("--textColor", "#ffffff");
+                        root.style.setProperty("--link", "#c5bfff");
+                    }
                 });
             });
         </script>
