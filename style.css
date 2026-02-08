@@ -1,0 +1,13 @@
+:root {
+  --bg: #100e24;
+  --sect: #5248bc;
+  --text: #e2e0ff;
+}
+body {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  background: var(--bg);
+  color: var(--text);
+}
+a {
+  color: #fff;
+}
