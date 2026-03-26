@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>speed read</title>
+    <style>
+      body {
+        background-color: #100e24;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+      #speedread {
+        background-color: black;
+        width: 60rem;
+        height: 20rem;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+      }
+      #word {
+        font-size: 30pt;
+      }
+      #enter {
+        width: 60rem;
+        height: 20rem;
+        resize: vertical;
+        background-color: white;
+        color: black;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 1rem;
+        margin: auto;
+      }
+      input,
+      label {
+        max-width: 60rem;
+        margin: auto;
+      }
+      #go {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="speedread">
+      <p id="word"></p>
+    </div>
+    <textarea id="enter"></textarea>
+    <label for="wpm">words per minute</label>
+    <input type="number" id="wpm" value="300" />
+    <button id="go">start</button>
+
+    <script>
+      const sp = document.getElementById("speedread");
+      const w = document.getElementById("word");
+      const tbox = document.getElementById("enter");
+      const wpmbox = document.getElementById("wpm");
+      const gobtn = document.getElementById("go");
+      const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+      gobtn.addEventListener("click", async () => {
+        let text = tbox.value;
+        let wpm = wpmbox.value;
+        let words = text.split(/\s+/);
+        for (const word of words) {
+          w.innerText = word;
+          await sleep(60000 / wpm);
+        }
+      });
+    </script>
+  </body>
+</html>
